@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Entries</h1>
+<% content_for :title do %>
+  Foodlog &ndash; <%= DateTime.now %>
+<% end %>
 
 <table>
   <thead>
@@ -8,7 +8,6 @@
       <th>Meal type</th>
       <th>Calories</th>
       <th>Proteins</th>
-      <th>Integer</th>
       <th>Carbohydrates</th>
       <th>Fats</th>
       <th colspan="3"></th>
@@ -21,7 +20,6 @@
         <td><%= entry.meal_type %></td>
         <td><%= entry.calories %></td>
         <td><%= entry.proteins %></td>
-        <td><%= entry.integer %></td>
         <td><%= entry.carbohydrates %></td>
         <td><%= entry.fats %></td>
         <td><%= link_to 'Show', entry %></td>
